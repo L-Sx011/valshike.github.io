@@ -1,33 +1,48 @@
-// ═══════════════════════════════════════════════════════════════════════
-// ОСНОВНОЙ JAVASCRIPT
-// ═══════════════════════════════════════════════════════════════════════
-
 document.addEventListener('DOMContentLoaded', function() {
     
     // ═══════════════════════════════════════════════════════════════════
-    // 1. ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ
+    // 1. ТЕМА — НАСЛЕДОВАНИЕ ОТ СИСТЕМЫ
     // ═══════════════════════════════════════════════════════════════════
     
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
     
-    // Проверяем сохранённую тему или системные настройки
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme) {
-        html.setAttribute('data-theme', savedTheme);
-    } else if (prefersDark) {
-        html.setAttribute('data-theme', 'dark');
+    function getSystemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
     
+    function applyTheme(theme) {
+        html.setAttribute('data-theme', theme);
+    }
+    
+    // Инициализация
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        applyTheme(getSystemTheme());
+    }
+    
+    // Слушаем изменения системной темы
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+    
+    // Кнопка переключения
     if (themeToggle) {
         themeToggle.addEventListener('click', function() {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            html.setAttribute('data-theme', newTheme);
+            const current = html.getAttribute('data-theme');
+            const newTheme = current === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
             localStorage.setItem('theme', newTheme);
+        });
+        
+        // Двойной клик — сброс к системной теме
+        themeToggle.addEventListener('dblclick', function() {
+            localStorage.removeItem('theme');
+            applyTheme(getSystemTheme());
         });
     }
     
@@ -56,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ═══════════════════════════════════════════════════════════════════
-    // 3. ШАПКА ПРИ СКРОЛЛЕ
+    // 3. ШАПКА И КНОПКА "НАВЕРХ"
     // ═══════════════════════════════════════════════════════════════════
     
     const header = document.getElementById('header');
@@ -162,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ═══════════════════════════════════════════════════════════════════
-    // 8. ГАЛЕРЕЯ (МОДАЛЬНОЕ ОКНО)
+    // 8. ГАЛЕРЕЯ
     // ═══════════════════════════════════════════════════════════════════
     
     const modal = document.getElementById('imageModal');
