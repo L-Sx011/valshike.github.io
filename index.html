@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- МЕТА-ИНФОРМАЦИЯ (не трогай, кроме отмеченных мест) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ОПИСАНИЕ_ТВОЕГО_САЙТА_ДЛЯ_ПОИСКОВИКОВ">
+    
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 🔧 ИЗМЕНИ: Название сайта (отображается во вкладке браузера)    -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <title>Название твоего проекта</title>
+    
+    <!-- Подключение бесплатного шрифта Google (безопасно, без авторских прав) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ШАПКА САЙТА (Header)                                            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <header class="header">
+        <div class="container header-content">
+            
+            <!-- 🔧 ИЗМЕНИ: Путь к логотипу и название -->
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Логотип" class="logo-image">
+                <span class="logo-text">НАЗВАНИЕ</span>
+            </a>
+            
+            <!-- Меню навигации -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <!-- 🔧 ИЗМЕНИ: Названия пунктов меню -->
+                    <li><a href="#home" class="nav-link">Главная</a></li>
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Кнопка мобильного меню (появляется на телефонах) -->
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ГЛАВНЫЙ ЭКРАН (Hero Section)                                    -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            
+            <!-- 🔧 ИЗМЕНИ: Главный заголовок -->
+            <h1 class="hero-title animate-on-scroll">
+                Добро пожаловать в<br>
+                <span class="highlight">Название проекта</span>
+            </h1>
+            
+            <!-- 🔧 ИЗМЕНИ: Подзаголовок/описание -->
+            <p class="hero-subtitle animate-on-scroll">
+                Здесь напиши краткое описание твоего проекта. 
+                Это первое, что увидят посетители, поэтому сделай 
+                его интересным и запоминающимся.
+            </p>
+            
+            <!-- 🔧 ИЗМЕНИ: Текст кнопки -->
+            <a href="#about" class="btn btn-primary animate-on-scroll">
+                Узнать больше
+            </a>
+        </div>
+        
+        <!-- Анимированная стрелка вниз -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- РАЗДЕЛ "О НАС" (About Section)                                  -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="about" class="about">
+        <div class="container">
+            
+            <!-- 🔧 ИЗМЕНИ: Заголовок раздела -->
+            <h2 class="section-title animate-on-scroll">О нашем проекте</h2>
+            
+            <div class="about-grid">
+                <!-- Левая колонка с текстом -->
+                <div class="about-text animate-on-scroll">
+                    
+                    <!-- 🔧 ИЗМЕНИ: Весь текст ниже -->
+                    <p>
+                        Здесь напиши подробное описание твоего проекта. 
+                        Расскажи, чем ты занимаешься, какие у тебя цели 
+                        и почему это важно.
+                    </p>
+                    <p>
+                        Можешь добавить второй абзац с дополнительной информацией.
+                        Расскажи историю создания или особенности проекта.
+                    </p>
+                    <p>
+                        И третий абзац, если нужно. Чем больше полезной информации,
+                        тем лучше для посетителей.
+                    </p>
+                </div>
+                
+                <!-- Правая колонка с карточками преимуществ -->
+                <div class="about-features">
+                    
+                    <!-- 🔧 ИЗМЕНИ: Карточки с преимуществами -->
+                    <!-- Карточка 1 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">✨</div>
+                        <h3 class="feature-title">Преимущество 1</h3>
+                        <p class="feature-text">Краткое описание первого преимущества вашего проекта.</p>
+                    </div>
+                    
+                    <!-- Карточка 2 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🚀</div>
+                        <h3 class="feature-title">Преимущество 2</h3>
+                        <p class="feature-text">Краткое описание второго преимущества вашего проекта.</p>
+                    </div>
+                    
+                    <!-- Карточка 3 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">💡</div>
+                        <h3 class="feature-title">Преимущество 3</h3>
+                        <p class="feature-text">Краткое описание третьего преимущества вашего проекта.</p>
+                    </div>
+                    
+                    <!-- Карточка 4 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">Преимущество 4</h3>
+                        <p class="feature-text">Краткое описание четвёртого преимущества вашего проекта.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- РАЗДЕЛ "ГАЛЕРЕЯ" (Gallery Section)                              -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            
+            <!-- 🔧 ИЗМЕНИ: Заголовок галереи -->
+            <h2 class="section-title animate-on-scroll">Наши работы</h2>
+            
+            <!-- 🔧 ИЗМЕНИ: Подзаголовок галереи -->
+            <p class="section-subtitle animate-on-scroll">
+                Посмотрите на то, что мы создаём
+            </p>
+            
+            <div class="gallery-grid">
+                
+                <!-- 🔧 ИЗМЕНИ: Фотографии галереи -->
+                <!-- Можешь добавить больше элементов, копируя блок ниже -->
+                
+                <!-- Фото 1 -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/photo1.jpg" alt="Описание фото 1" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Подпись к фото 1</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 2 -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/photo2.jpg" alt="Описание фото 2" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Подпись к фото 2</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 3 -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/photo3.jpg" alt="Описание фото 3" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Подпись к фото 3</p>
+                    </div>
+                </div>
+                
+                <!-- Фото 4 -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/photo4.jpg" alt="Описание фото 4" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Подпись к фото 4</p>
+                    </div>
+                </div>
+                
+                <!-- 
+                🔧 ЧТОБЫ ДОБАВИТЬ ЕЩЁ ФОТО:
+                1. Скопируй блок ниже
+                2. Измени photo5.jpg на имя твоего файла
+                3. Измени описание и подпись
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/photo5.jpg" alt="Описание фото 5" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Подпись к фото 5</p>
+                    </div>
+                </div>
+                -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- РАЗДЕЛ "КОНТАКТЫ" (Contact Section)                             -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            
+            <!-- 🔧 ИЗМЕНИ: Заголовок контактов -->
+            <h2 class="section-title animate-on-scroll">Связаться с нами</h2>
+            
+            <div class="contact-grid">
+                
+                <!-- Левая часть - информация -->
+                <div class="contact-info animate-on-scroll">
+                    
+                    <!-- 🔧 ИЗМЕНИ: Контактную информацию -->
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>твоя-почта@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3>Телефон</h3>
+                            <p>+7 (XXX) XXX-XX-XX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Адрес</h3>
+                            <p>Город, улица, дом</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 🔧 ИЗМЕНИ: Социальные сети -->
+                    <div class="social-links">
+                        <a href="https://vk.com/ТВОЙ_ПРОФИЛЬ" class="social-link" target="_blank" rel="noopener noreferrer">VK</a>
+                        <a href="https://t.me/ТВОЙ_ПРОФИЛЬ" class="social-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+                        <a href="https://www.youtube.com/@ТВОЙ_КАНАЛ" class="social-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    </div>
+                </div>
+                
+                <!-- Правая часть - форма -->
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" required placeholder="Введите имя">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Введите email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" required placeholder="Введите сообщение" rows="5"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ПОДВАЛ САЙТА (Footer)                                           -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <!-- 🔧 ИЗМЕНИ: Текст копирайта -->
+                <p class="copyright">
+                    © 2024 Название твоего проекта. Все права защищены.
+                </p>
+                
+                <nav class="footer-nav">
+                    <a href="#home">Главная</a>
+                    <a href="#about">О нас</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#contact">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для просмотра фото (не трогай) -->
+    <div class="modal" id="imageModal">
+        <button class="modal-close" aria-label="Закрыть">&times;</button>
+        <img src="" alt="" class="modal-image" id="modalImage">
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="script.js"></script>
+</body>
+</html>
